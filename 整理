@@ -1,0 +1,16 @@
+def judge(number):
+    if number <= 2:
+       return []
+    nlist = list(range(1,number+1))
+    nlist[0] = 0
+    k = 2
+    while k * k <= number:
+        if nlist[k-1] != 0:
+            for i in range(2*k,number+1,k):
+                nlist[i-1] = 0
+        k += 1
+    result = []
+    for num in nlist:
+        if num != 0:
+            result.append(num)
+    return result
