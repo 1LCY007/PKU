@@ -1,0 +1,6 @@
+1. 当输入不确定的时候，可以使用如下语句进行结束：
+while True:
+  try:
+      s = input()
+  except EOFError:
+    break
