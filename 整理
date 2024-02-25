@@ -1,3 +1,4 @@
+1. 欧式筛法
 def judge(number):
     if number <= 2:
        return []
@@ -14,3 +15,29 @@ def judge(number):
         if num != 0:
             result.append(num)
     return result
+2. 图
+== 节点
+== 队列
+== 一种思考方式，一种算法
+一、图
+== 节点
+（1） 广度优先搜索
+（2）广度优先搜索中按顺序进行查找。
+= 队列：先进先出
+（3） 用散列表
+From collections import deque()
+Graph = {}
+graph["you"] = ["alice", "bob", "claire"]
+graph["bob"] = ["anuj", "peggy"]
+graph["alice"] = ["peggy"]
+graph["claire"] = ["thom", "jonny"]
+graph["anuj"] = []
+graph["peggy"] = []
+graph["thom"] = []
+graph["jonny"] = []
+二、lambda排序
+lst.sort(key = lambda x:len(str(x)))
+lst.sort(key = lambda x : (x[1],x[0]))
+顺序代表排序的优先级
+另外的可以加上负号表示正排序或反排序
+-x[1],-x[0]
