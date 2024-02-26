@@ -4,3 +4,29 @@ while True:
       s = input()
   except EOFError:
     break
+
+2. 字典按顺序输入以及表的排序：
+    for _ in range(sums):
+        ti,xi = map(int,input().split())
+        dic.setdefault(ti,[]).append(xi)
+将输入的东西插入到字典中
+        for _ in sorted(dic.keys()):
+                lst = dic.get(_)
+                lst.sort(reverse = True)
+按keys排列后的顺序输出。
+3. 
+调用defaultdict包
+from collectionsimport defaultdict
+dict =defaultdict( factory_function)
+factory_function可以是list、set、str等等，作用是当key不存在时，返回的是工厂函数的默认值，
+比如list对应[ ]，str对应的是空字符串，set对应set( )，int对应0。
+
+示例代码：
+lst = ['A', 'B', 'C', 'D', 'e']
+dic = {}
+
+for i in lst:
+    dic.setdefault(i, 0)
+    dic[i] += 1
+print(dic)
+输出结果：{A:1,B:1,C:1,D:1,e:1}
